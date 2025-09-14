@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agende seu horário na Barbearia Estilo de forma rápida e fácil. Escolha o serviço, data e horário que melhor se adequa à sua agenda.">
+    <meta name="keywords" content="agendamento barbearia, marcar horário, barbeiro, corte de cabelo, barba, reserva online">
+    <meta name="author" content="Barbearia Estilo">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Agendamento - Barbearia Estilo">
+    <meta property="og:description" content="Agende seu horário na Barbearia Estilo de forma rápida e fácil. Escolha o serviço, data e horário.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.barbearia-estilo.com/agendamento.html">
+    <meta property="og:image" content="assets/img/og-image-agendamento.jpg">
+    <title>Agendamento - Barbearia Estilo</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="canonical" href="https://www.barbearia-estilo.com/agendamento.html">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Barbearia Estilo</h1>
+            </div>
+            <nav role="navigation" aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="agendamento.html" aria-current="page">Agendamento</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Agendamento</h2>
+            <p>Marque seu horário de forma rápida e fácil</p>
+        </div>
+    </section>
+
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-content">
+                <div class="booking-info">
+                    <h2 class="section-title">Como Funciona</h2>
+                    <div class="booking-steps">
+                        <div class="booking-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Escolha o Serviço</h3>
+                                <p>Selecione o serviço desejado entre as opções disponíveis.</p>
+                            </div>
+                        </div>
+                        <div class="booking-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Selecione a Data e Hora</h3>
+                                <p>Escolha o dia e horário que melhor se adequa à sua agenda.</p>
+                            </div>
+                        </div>
+                        <div class="booking-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Informe seus Dados</h3>
+                                <p>Preencha seus dados para confirmar o agendamento.</p>
+                            </div>
+                        </div>
+                        <div class="booking-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Confirmação</h3>
+                                <p>Receba a confirmação do seu agendamento por e-mail ou SMS.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="booking-form">
+                    <h2 class="section-title">Agende seu Horário</h2>
+                    <div class="booking-tabs" role="tablist">
+                        <button class="booking-tab active" data-tab="form" role="tab" aria-selected="true" aria-controls="form-content" id="form-tab-btn">Formulário</button>
+                        <button class="booking-tab" data-tab="calendar" role="tab" aria-selected="false" aria-controls="calendar-content" id="calendar-tab-btn">Google Agenda</button>
+                    </div>
+                    
+                    <div class="booking-content-container">
+                        <div class="booking-content active" id="form-content" role="tabpanel" aria-labelledby="form-tab-btn">
+                            <form id="appointment-form">
+                                <div class="form-group">
+                                    <label for="name">Nome Completo</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Telefone</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="service">Serviço</label>
+                                    <select id="service" name="service" required>
+                                        <option value="">Selecione um serviço</option>
+                                        <option value="corte">Corte de Cabelo</option>
+                                        <option value="barba">Barba</option>
+                                        <option value="combo">Combo (Corte + Barba)</option>
+                                        <option value="tratamento">Tratamentos</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="barber">Barbeiro</label>
+                                    <select id="barber" name="barber">
+                                        <option value="">Selecione um barbeiro (opcional)</option>
+                                        <option value="joao">João Silva</option>
+                                        <option value="pedro">Pedro Oliveira</option>
+                                        <option value="lucas">Lucas Santos</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="date">Data</label>
+                                    <input type="date" id="date" name="date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="time">Horário</label>
+                                    <select id="time" name="time" required>
+                                        <option value="">Selecione um horário</option>
+                                        <option value="09:00">09:00</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="17:00">17:00</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="notes">Observações</label>
+                                    <textarea id="notes" name="notes" rows="3"></textarea>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input type="checkbox" class="form-check-input" id="add-to-calendar-checkbox" name="add-to-calendar">
+                                    <label class="form-check-label" for="add-to-calendar-checkbox">Adicionar ao Google Calendar</label>
+                                </div>
+                                <button type="submit" class="btn btn-block">Confirmar Agendamento</button>
+                                <div class="calendar-alerts mt-3"></div>
+                            </form>
+                        </div>
+                        
+                        <div class="booking-content" id="calendar-content" role="tabpanel" aria-labelledby="calendar-tab-btn">
+                            <div class="google-calendar-container">
+                                <iframe src="https://calendar.google.com/calendar/embed?src=barbearia.estilo%40gmail.com&ctz=America%2FSao_Paulo" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+                            </div>
+                            <p class="calendar-info">Para agendar diretamente pelo Google Agenda, clique no horário desejado no calendário acima e preencha as informações solicitadas.</p>
+                            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0Vz8K_jIXYyN_fkdgFc4mQWt9ZT5xha9Md7fMXUGqQvtmWS8X5tHqRJGjZ" target="_blank" class="btn btn-block">Agendar no Google Agenda</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Nossos Preços</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Corte de Cabelo</h3>
+                        <div class="price">R$ 45,00</div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Corte personalizado</li>
+                            <li>Lavagem</li>
+                            <li>Finalização</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Barba</h3>
+                        <div class="price">R$ 35,00</div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Modelagem</li>
+                            <li>Toalha quente</li>
+                            <li>Produtos especiais</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-header">
+                        <h3>Combo</h3>
+                        <div class="price">R$ 70,00</div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Corte completo</li>
+                            <li>Barba completa</li>
+                            <li>Hidratação facial</li>
+                            <li>10% de desconto</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Tratamentos</h3>
+                        <div class="price">A partir de R$ 50,00</div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Hidratação</li>
+                            <li>Reconstrução</li>
+                            <li>Tratamentos especiais</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Alguma Dúvida?</h2>
+            <p>Entre em contato conosco para mais informações</p>
+            <a href="contato.html" class="btn">Fale Conosco</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Barbearia Estilo</h2>
+                    <p>Estilo e precisão em cada corte</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="agendamento.html">Agendamento</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Rua das Tesouras, 123</p>
+                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                    <p><i class="fas fa-envelope"></i> contato@barbearia.com</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Barbearia Estilo. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/google-calendar.js"></script>
+</body>
+</html>

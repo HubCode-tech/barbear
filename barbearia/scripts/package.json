@@ -1,0 +1,14 @@
+{
+  "name": "barbearia-image-tools",
+  "version": "1.0.0",
+  "description": "Ferramentas para otimização de imagens do site da Barbearia",
+  "main": "convert-images.js",
+  "scripts": {
+    "convert": "node convert-images.js",
+    "optimize": "node optimize-images.js"
+  },
+  "dependencies": {
+    "sharp": "^0.32.1"
+  },
+  "private": true
+}
